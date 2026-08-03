@@ -1,17 +1,10 @@
-let firstName = "John";
-console.log(firstName);
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-firstName = "Tim";
-console.log(firstName);
+function sumOfTrippledEvents(array) {
+    return array
+    .filter((num) => num % 2 ===0)
+    .map((num) => num * 3)
+    .reduce((acc, curr) => acc + curr);
+}
 
-const myVar = "Meow";
-//myVar = "woof";
-
-console.log(myVar);
-
-console.log(39 + 500);
-
-console.log(5 + 2 + 7 + 257 + 10 + 75);
-
-let expression = (4 + 6 + 9) / 77;
-console.log(expression);
+console.log(sumOfTrippledEvents(arr));
