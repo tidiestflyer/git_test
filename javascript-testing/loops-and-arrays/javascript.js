@@ -65,4 +65,20 @@ function shuffle(arr) {
 }
 
 shuffle(arrayToBeShuffled);
-console.log(arrayToBeShuffled);
+//console.log(arrayToBeShuffled);
+
+
+const strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"];
+
+function unique(arr) {
+    array = [];
+    for(i = 0; i < arr.length; i++) {
+        if(array.includes(arr[i]) == false) {
+            array.push(arr[i]);
+        }
+    }
+    return array;
+}
+
+console.log(unique(strings));
