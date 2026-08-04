@@ -17,9 +17,21 @@ function camelize (string) {
 console.log(camelize("The-star-spangled-banner"));
 
 function filterRange (arr, a, b) {
-    filtered = arr.filter((letter) => letter >= a && letter <= b);
+    filtered = arr.filter((num) => num >= a && num <= b);
     return filtered;
 }
 
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-filterRange(array, 5, 7);
+const arrayImutable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(filterRange(arrayImutable, 5, 7));
+
+function filterRangeInPlace(arr, a, b) {
+    for(i = 0; i < arr.length; i++) {
+        if (arr[i] < a || arr[i] > b) {
+            arr.splice(i, 1);
+            i--
+        }
+    }
+}
+let arrayMutable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+filterRangeInPlace(arrayMutable, 5, 7);
+console.log(arrayMutable);
