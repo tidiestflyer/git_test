@@ -35,3 +35,11 @@ function filterRangeInPlace(arr, a, b) {
 let arrayMutable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 filterRangeInPlace(arrayMutable, 5, 7);
 console.log(arrayMutable);
+
+let arrayToSort = [5, 2, 1, -10, 8];
+
+function sortArrayDecrease(arr) {
+    arr.sort().reverse();
+}
+sortArrayDecrease(arrayToSort);
+console.log(arrayToSort);
