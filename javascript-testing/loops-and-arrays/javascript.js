@@ -21,8 +21,8 @@ function filterRange (arr, a, b) {
     return filtered;
 }
 
-const arrayImutable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(filterRange(arrayImutable, 5, 7));
+const arrayImmutable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(filterRange(arrayImmutable, 5, 7));
 
 function filterRangeInPlace(arr, a, b) {
     for(i = 0; i < arr.length; i++) {
@@ -43,3 +43,12 @@ function sortArrayDecrease(arr) {
 }
 sortArrayDecrease(arrayToSort);
 console.log(arrayToSort);
+
+const arrayOfWords = ["HTML", "Javascript", "CSS"];
+
+function copySorted(arr) {
+    return arr.sort();
+}
+
+let sortedArrayOfWords = copySorted(arrayOfWords);
+console.log(sortedArrayOfWords);
