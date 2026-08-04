@@ -14,7 +14,7 @@ function camelize (string) {
     return camelCase;
 }
 
-console.log(camelize("The-star-spangled-banner"));
+//console.log(camelize("The-star-spangled-banner"));
 
 function filterRange (arr, a, b) {
     filtered = arr.filter((num) => num >= a && num <= b);
@@ -22,7 +22,7 @@ function filterRange (arr, a, b) {
 }
 
 const arrayImmutable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(filterRange(arrayImmutable, 5, 7));
+//console.log(filterRange(arrayImmutable, 5, 7));
 
 function filterRangeInPlace(arr, a, b) {
     for(i = 0; i < arr.length; i++) {
@@ -34,7 +34,7 @@ function filterRangeInPlace(arr, a, b) {
 }
 let arrayMutable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 filterRangeInPlace(arrayMutable, 5, 7);
-console.log(arrayMutable);
+//console.log(arrayMutable);
 
 let arrayToSort = [5, 2, 1, -10, 8];
 
@@ -42,7 +42,7 @@ function sortArrayDecrease(arr) {
     arr.sort().reverse();
 }
 sortArrayDecrease(arrayToSort);
-console.log(arrayToSort);
+//console.log(arrayToSort);
 
 const arrayOfWords = ["HTML", "Javascript", "CSS"];
 
@@ -51,4 +51,18 @@ function copySorted(arr) {
 }
 
 let sortedArrayOfWords = copySorted(arrayOfWords);
-console.log(sortedArrayOfWords);
+//console.log(sortedArrayOfWords);
+
+let arrayToBeShuffled = [1, 2, 3];
+
+function shuffle(arr) {
+    length = arr.length;
+    for(i = 0; i < length; i++) {
+        randomIndex = Math.floor(Math.random() * length)
+        arr.push(arr[randomIndex]);
+        arr.splice(randomIndex, 1)
+    }
+}
+
+shuffle(arrayToBeShuffled);
+console.log(arrayToBeShuffled);
