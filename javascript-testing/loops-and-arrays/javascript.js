@@ -15,3 +15,12 @@ function camelize (string) {
 }
 
 console.log(camelize("The-star-spangled-banner"));
+
+function filterRange (arr, a, b) {
+    filtered = arr.filter((letter) => letter >= a && letter <= b);
+    console.log("Input " + arr);
+    console.log("Output " + filtered);
+}
+
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+filterRange(array, 5, 7);
