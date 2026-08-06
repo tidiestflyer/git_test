@@ -1,12 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="javascript.js" defer></script>
-</head>
-<body>
-    
-</body>
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 12px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <form>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button>Add item</button>
+    </form>
+
+    <ul>
+
+    </ul>
+
+    <script>
+        const unorderedList = document.querySelector("ul");
+        const inputBox = document.querySelector("input");
+        const button = document.querySelector("button");
+
+        function buttonClick(event) {
+            event.preventDefault();
+            userInput = inputBox.value;
+            inputBox.value = "";
+
+            let listItem = document.createElement("li");
+            let spanItem = document.createElement("span");
+            let buttonItem = document.createElement("button");
+
+            unorderedList.appendChild(listItem);
+
+            listItem.appendChild(spanItem);
+            listItem.appendChild(buttonItem);
+            spanItem.textContent = userInput;
+            buttonItem.textContent = "DELETE";
+
+            buttonItem.addEventListener('click', () => listItem.remove());
+            inptBox.focus();
+        }
+
+        button.addEventListener('click', buttonClick);
+    </script>
+  </body>
 </html>
