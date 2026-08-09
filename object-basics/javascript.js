@@ -51,11 +51,15 @@ function sortByAge(users) {
 //console.log(users);
 
 function getAverageAge(users) {
+    /*
     average = 0;
     for(i = 0; i < users.length; i++) {
         average += users[i].age;
     }
     return Math.round(average/[i]);
+    */
+
+    return users.reduce((acc, cur) => acc + cur.age, 0) / users.length
 }
 
 console.log(getAverageAge(users));
