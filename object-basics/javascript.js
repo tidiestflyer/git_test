@@ -47,5 +47,15 @@ function sortByAge(users) {
     users.sort((a, b) => a.age - b.age);
 }
 
-sortByAge(users)
-console.log(users);
+//sortByAge(users)
+//console.log(users);
+
+function getAverageAge(users) {
+    average = 0;
+    for(i = 0; i < users.length; i++) {
+        average += users[i].age;
+    }
+    return Math.round(average/[i]);
+}
+
+console.log(getAverageAge(users));
