@@ -1,6 +1,6 @@
-let john = { name: "John", surname: "Smith", id: 1 };
-let pete = { name: "Pete", surname: "Hunt", id: 2 };
-let mary = { name: "Mary", surname: "Key", id: 3 };
+let john = { name: "John", surname: "Smith", id: 1, age: 25 };
+let pete = { name: "Pete", surname: "Hunt", id: 2, age: 30  };
+let mary = { name: "Mary", surname: "Key", id: 3, age: 28  };
 
 let users = [ john, pete, mary ];
 
@@ -34,11 +34,18 @@ function mapToObjects2(humanLibrary) {
     console.log(library);
 }
 
-mapToObjects2(users);
+//mapToObjects2(users);
 
 const mapToObjects3 = users.map((user) => ({
     //fullname: `${user.name} ${user.surname}`,
     fullname: user.name + " " + user.surname,
     id: user.id,
 }));
-console.log(mapToObjects3);
+//console.log(mapToObjects3);
+
+function sortByAge(users) {
+    users.sort((a, b) => a.age - b.age);
+}
+
+sortByAge(users)
+console.log(users);
