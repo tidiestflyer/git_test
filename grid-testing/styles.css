@@ -1,0 +1,11 @@
+.container {
+    background-color: blue;
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    column-gap: 25px;
+    justify-content:space-around;
+}
+
+.container div {
+    border: solid red;
+}
